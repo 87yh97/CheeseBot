@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="gui" default="false"/>
+  <arg name="gui" default="true"/>
 
   <include file="$(find myrobot_simulator)/launch/gazebo.launch">
     <arg name="gui" value="$(arg gui)" />
