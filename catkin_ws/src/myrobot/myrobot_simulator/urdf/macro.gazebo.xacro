@@ -12,6 +12,16 @@
     <mu2>4</mu2>
   </gazebo>
 
+  <gazebo reference="left_back_wheel">
+    <mu1>4</mu1>
+    <mu2>4</mu2>
+  </gazebo>
+
+  <gazebo reference="right_back_wheel">
+    <mu1>4</mu1>
+    <mu2>4</mu2>
+  </gazebo>
+
   <gazebo reference="base_link">
     <material>Gazebo/Gray</material>
   </gazebo>

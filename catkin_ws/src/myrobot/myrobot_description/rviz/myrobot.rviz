@@ -81,6 +81,16 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        left_back_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        right_back_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true  
         rplidar_a2_frame:
           Alpha: 1
           Show Axes: false

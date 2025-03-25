@@ -87,6 +87,16 @@
       <origin xyz="${wheel_base_x} ${-wheel_base_y} ${wheel_base_z}"/>
     </xacro:wheel>
 
+    <xacro:wheel wheel_prefix="left_back" parent_link="base_link" left_right="-1" 
+      radius="${wheel_radius}" width="${wheel_width}" mass="${wheel_mass}">
+      <origin xyz="${-1*wheel_base_x} ${wheel_base_y} ${wheel_base_z}"/>
+    </xacro:wheel>
+
+    <xacro:wheel wheel_prefix="right_back" parent_link="base_link" left_right="1" 
+      radius="${wheel_radius}" width="${wheel_width}" mass="${wheel_mass}">
+      <origin xyz="${-1*wheel_base_x} ${-wheel_base_y} ${wheel_base_z}"/>
+    </xacro:wheel>
+
     <!-- 
     <xacro:roller name="front" parent="base_link" radius="${roller_radius}" mass="${roller_mass}">
       <origin xyz="${roller_base_x} ${roller_base_y} ${roller_base_z}"/>
