@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #gnome-terminal -- catkin_make && roscore &
-cd catkin_ws
-catkin_make
-cd ..
+#cd catkin_ws
+#catkin_make
+#cd ..
 #$PID=$!
 sleep 2
 gnome-terminal -- roslaunch myrobot_control control.launch &

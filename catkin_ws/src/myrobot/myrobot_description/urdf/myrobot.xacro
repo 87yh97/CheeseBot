@@ -11,8 +11,6 @@
   <xacro:property name="wheel_width" value="0.03"/>
   <xacro:property name="wheel_mass" value="0.1"/>
 
-  <xacro:property name="roller_radius" value="0.05"/>
-  <xacro:property name="roller_mass" value="0.1"/>
 
   <xacro:property name="lidar_radius" value="0.002"/>
   <xacro:property name="lidar_width" value="0.002"/>
@@ -34,11 +32,7 @@
   <xacro:property name="wheel_base_y" value="${base_size_y/2 + wheel_width/2}"/>
   <!-- <xacro:property name="wheel_base_z" value="${-1 * sqrt((base_size_x*base_size_x) - (wheel_base_x*wheel_base_x))}"/> -->
   <xacro:property name="wheel_base_z" value="${-1 * sqrt((base_size_x*base_size_x) - (wheel_base_x*wheel_base_x))+wheel_radius}"/>
- 
 
-  <xacro:property name="roller_base_x" value="${roller_radius}"/>
-  <xacro:property name="roller_base_y" value="0.0"/>
-  <xacro:property name="roller_base_z" value="0.0"/>
   
   <xacro:property name="lidar_base_x" value="0.0"/>
   <xacro:property name="lidar_base_y" value="0.0"/>
@@ -66,11 +60,6 @@
 
     <!-- ============ Enter base_link code here =============== -->
 
-<!--
-    <link name="base_link">
-      <xacro:make_box sx="${base_size_x}" sy="${base_size_y}" sz="${base_size_z}" mass="${base_mass}" xyz="${base_x} ${base_y} ${base_z}"/>
-    </link>
--->
     <link name="base_link">
       <xacro:make_cylinder radius="${base_size_x}" length="${base_size_y}" mass="${base_mass}" xyz="${base_x} ${base_y} ${base_z}"/>
     </link>
@@ -80,7 +69,7 @@
     <xacro:wheel wheel_prefix="left" parent_link="base_link" left_right="-1" 
       radius="${wheel_radius}" width="${wheel_width}" mass="${wheel_mass}">
       <origin xyz="${wheel_base_x} ${wheel_base_y} ${wheel_base_z}"/>
-    </xacro:wheel>
+    </xacro:wheel>`
 
     <xacro:wheel wheel_prefix="right" parent_link="base_link" left_right="1" 
       radius="${wheel_radius}" width="${wheel_width}" mass="${wheel_mass}">
@@ -97,11 +86,6 @@
       <origin xyz="${-1*wheel_base_x} ${-wheel_base_y} ${wheel_base_z}"/>
     </xacro:wheel>
 
-    <!-- 
-    <xacro:roller name="front" parent="base_link" radius="${roller_radius}" mass="${roller_mass}">
-      <origin xyz="${roller_base_x} ${roller_base_y} ${roller_base_z}"/>
-    </xacro:roller>
-    -->
     <!-- ============ Enter sensors code here =============== -->
     <!-- ============ LIDAR =============== -->
 
