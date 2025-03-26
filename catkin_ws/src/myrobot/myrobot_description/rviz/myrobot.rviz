@@ -71,17 +71,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        left_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        right_wheel:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         left_back_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        left_wheel:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -91,6 +86,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true  
+        right_wheel:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         rplidar_a2_frame:
           Alpha: 1
           Show Axes: false
@@ -271,8 +271,8 @@ Visualization Manager:
         Color: 0; 255; 0
         Head Length: 0.009999999776482582
         Head Radius: 0.009999999776482582
-        Shaft Length: 0.05000000074505806
-        Shaft Radius: 0.004999999888241291
+        Shaft Length: 0.1000000074505806
+        Shaft Radius: 0.010999999888241291
         Value: Arrow
       Topic: /controller/odom
       Unreliable: false
